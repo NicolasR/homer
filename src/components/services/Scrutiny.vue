@@ -65,7 +65,7 @@ export default {
               (device) =>
                 device.device.device_status > 0 &&
                 device.device.device_status <= 3)?.length || 0;
-          this.unknown = devices.length - (this.passed + this.failed) || 0;
+          this.unknown = availableDevices.length - (this.passed + this.failed) || 0;
         })
         .catch((e) => {
           console.error(e);
